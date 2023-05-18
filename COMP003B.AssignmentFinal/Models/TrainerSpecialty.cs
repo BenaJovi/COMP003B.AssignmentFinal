@@ -11,3 +11,4 @@
 		public virtual Specialty? Specialty { get; set; }
 	}
 }
+ 
