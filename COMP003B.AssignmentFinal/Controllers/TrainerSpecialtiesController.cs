@@ -50,7 +50,7 @@ namespace COMP003B.AssignmentFinal.Controllers
         public IActionResult Create()
         {
             ViewData["SpecialtyId"] = new SelectList(_context.Specialties, "SpecialtyId", "SpecialtyName");
-            ViewData["TrainerId"] = new SelectList(_context.Trainers, "TrainerId", "TrainerGender");
+            ViewData["TrainerId"] = new SelectList(_context.Trainers, "TrainerId", "TrainerName");
             return View();
         }
 
@@ -68,7 +68,7 @@ namespace COMP003B.AssignmentFinal.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["SpecialtyId"] = new SelectList(_context.Specialties, "SpecialtyId", "SpecialtyName", trainerSpecialty.SpecialtyId);
-            ViewData["TrainerId"] = new SelectList(_context.Trainers, "TrainerId", "TrainerGender", trainerSpecialty.TrainerId);
+            ViewData["TrainerId"] = new SelectList(_context.Trainers, "TrainerId", "TrainerName", trainerSpecialty.TrainerId);
             return View(trainerSpecialty);
         }
 
@@ -86,7 +86,7 @@ namespace COMP003B.AssignmentFinal.Controllers
                 return NotFound();
             }
             ViewData["SpecialtyId"] = new SelectList(_context.Specialties, "SpecialtyId", "SpecialtyName", trainerSpecialty.SpecialtyId);
-            ViewData["TrainerId"] = new SelectList(_context.Trainers, "TrainerId", "TrainerGender", trainerSpecialty.TrainerId);
+            ViewData["TrainerId"] = new SelectList(_context.Trainers, "TrainerId", "TrainerName", trainerSpecialty.TrainerId);
             return View(trainerSpecialty);
         }
 
@@ -123,7 +123,7 @@ namespace COMP003B.AssignmentFinal.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["SpecialtyId"] = new SelectList(_context.Specialties, "SpecialtyId", "SpecialtyName", trainerSpecialty.SpecialtyId);
-            ViewData["TrainerId"] = new SelectList(_context.Trainers, "TrainerId", "TrainerGender", trainerSpecialty.TrainerId);
+            ViewData["TrainerId"] = new SelectList(_context.Trainers, "TrainerId", "TrainerName", trainerSpecialty.TrainerId);
             return View(trainerSpecialty);
         }
 
