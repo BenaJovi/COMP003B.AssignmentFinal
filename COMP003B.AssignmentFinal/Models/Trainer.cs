@@ -15,5 +15,7 @@ namespace COMP003B.AssignmentFinal.Models
 
 		// Collection navigation property
 		public virtual ICollection<TrainerSpecialty>? TrainerSpecialties { get; set; }
+
+		public int Age { get; set; } //New Property
 	}
 }
