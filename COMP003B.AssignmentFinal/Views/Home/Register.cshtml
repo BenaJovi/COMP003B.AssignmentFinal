@@ -1,27 +1,27 @@
-﻿﻿@model RegistrationViewModel
+﻿﻿@model COMP003B.AssignmentFinal.Models.RegistrationViewModel
 <form asp-action="ThankYou" asp-controller="Home" method="post">
 	 <div class="form-group">
-		 <label asp-for="Name"></label>
-		 <input asp-for="Name" class="form-control"/>
-		 <span asp-validation-for="Name" class="text-danger"></span>
+		 <label asp-for="UserName"></label>
+		<input asp-for="UserName" class="form-control" />
+		<span asp-validation-for="UserName" class="text-danger"></span>
 	 </div>
 	 
 	<div class="form-group">
-		<label asp-for="Email"></label>
-		 <input asp-for="Email" class="form-control"/>
-		 <span asp-validation-for="Email" class="text-danger"></span>
+		<label asp-for="UserEmail"></label>
+		<input asp-for="UserEmail" class="form-cont rol"/>
+		<span asp-validation-for="UserEmail" class="text-danger"></span>
 	</div>
 	
 	<div class="form-group">
-		<label asp-for="PhoneNumber"></label>
-		<input asp-for="PhoneNumber" class="form-control"/>
-		<span asp-validation-for="PhoneNumber" class="text-danger"></span>
+		<label asp-for="UserPhoneNumber"></label>
+		<input asp-for="UserPhoneNumber" class="form-cont rol"/>
+		<span asp-validation-for="UserPhoneNumber" class="text-danger"></span>
 	</div>
 	
 	<div class="form-group">
-		<label asp-for="Age"></label>
-		<input asp-for="Age" class="form-control"/>
-		<span asp-validation-for="Age" class="text-danger"></span>
+		<label asp-for="UserAge"></label>
+		<input asp-for="UserAge" class="form-control" />
+		<span asp-validation-for="UserAge" class="text-danger"></span>
 	</div>
 <p></p>
 	<button type="submit" class="btn btn-success"> Register</button>

@@ -7,15 +7,15 @@ namespace COMP003B.AssignmentFinal.Models
       
         [Required]
         [StringLength(100)]
-        public string Name { get; set; }
+        public string? UserName { get; set; }
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
+        public string? UserEmail { get; set; }
         [Required]
         [Phone]
-        public string PhoneNumber { get; set; }
+        public string? UserPhoneNumber { get; set; }
         [Required]
-        public string Age { get; set; }
+        public string? UserAge { get; set; }
 
     }
 }
