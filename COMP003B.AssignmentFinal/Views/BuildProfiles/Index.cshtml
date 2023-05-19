@@ -1,0 +1,47 @@
+﻿@model IEnumerable<COMP003B.AssignmentFinal.Models.BuildProfile>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfileGender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfileHeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfileWeight)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfileGender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfileHeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfileWeight)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BuildProfileId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BuildProfileId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BuildProfileId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

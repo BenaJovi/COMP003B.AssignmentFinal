@@ -48,11 +48,12 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="TrainerSpecialties" asp-action="Index">TrainerSpecialties</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Register">Register</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="BuildProfiles" asp-action="Index">BuildProfiles</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Register">Register</a>
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -63,12 +64,15 @@
             @RenderBody()
         </main>
     </div>
+    @await Html.PartialAsync("_AboutTheOrganizer")
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
+
+    <footer class="fixed-bottom-0 footer text-muted ">
+        <div class="container text-sm-end">
             &copy; 2023 - COMP003B.AssignmentFinal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
