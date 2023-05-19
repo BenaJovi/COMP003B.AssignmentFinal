@@ -1,10 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
 namespace COMP003B.AssignmentFinal.Models
 {
     public class RegistrationViewModel
     {
-      
         [Required]
         [StringLength(100)]
         public string? UserName { get; set; }
@@ -19,4 +17,3 @@ namespace COMP003B.AssignmentFinal.Models
 
     }
 }
-

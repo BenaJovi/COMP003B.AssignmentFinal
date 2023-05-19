@@ -24,24 +24,24 @@ namespace COMP003B.AssignmentFinal.Controllers
 			return View();
 		}
 
-        [HttpGet]
-        public IActionResult Register()
-        {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult ThankYou(RegistrationViewModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View("Register", model);
-            }
-            return View(model);
-        }
+		[HttpGet]
+		public IActionResult Register()
+		{
+			return View();
+		}
+
+		[HttpPost]
+		public IActionResult ThankYou(RegistrationViewModel model)
+		{
+			if (!ModelState.IsValid)
+			{
+				return View("Register", model);
+			}
+			return View(model);
+		}
 
 
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

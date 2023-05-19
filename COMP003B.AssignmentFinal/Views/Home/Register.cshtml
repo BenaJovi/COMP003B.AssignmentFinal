@@ -1,26 +1,26 @@
-﻿﻿@model COMP003B.AssignmentFinal.Models.RegistrationViewModel
+﻿@model RegistrationViewModel
 <form asp-action="ThankYou" asp-controller="Home" method="post">
 	 <div class="form-group">
 		 <label asp-for="UserName"></label>
 		<input asp-for="UserName" class="form-control" />
 		<span asp-validation-for="UserName" class="text-danger"></span>
 	 </div>
-	 
+
 	<div class="form-group">
 		<label asp-for="UserEmail"></label>
-		<input asp-for="UserEmail" class="form-cont rol"/>
+		<input asp-for="UserEmail" class="form-control" />
 		<span asp-validation-for="UserEmail" class="text-danger"></span>
 	</div>
-	
+
 	<div class="form-group">
 		<label asp-for="UserPhoneNumber"></label>
 		<input asp-for="UserPhoneNumber" class="form-cont rol"/>
 		<span asp-validation-for="UserPhoneNumber" class="text-danger"></span>
 	</div>
-	
+
 	<div class="form-group">
 		<label asp-for="UserAge"></label>
-		<input asp-for="UserAge" class="form-control" />
+		<input asp-for="UserAge" class="form-cont rol"/>
 		<span asp-validation-for="UserAge" class="text-danger"></span>
 	</div>
 <p></p>
