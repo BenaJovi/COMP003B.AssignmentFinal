@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
-
+ 
 namespace COMP003B.AssignmentFinal.Migrations
 {
     /// <inheritdoc />
