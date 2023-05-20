@@ -99,7 +99,7 @@ namespace COMP003B.AssignmentFinal.Migrations
 
                     b.HasOne("COMP003B.AssignmentFinal.Models.Trainer", "Trainer")
                         .WithMany("TrainerSpecialties")
-                        .HasForeignKey("TrainerId")
+                         .HasForeignKey("TrainerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
