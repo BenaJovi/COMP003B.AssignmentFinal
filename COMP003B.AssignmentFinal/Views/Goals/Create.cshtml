@@ -1,0 +1,60 @@
+﻿@model COMP003B.AssignmentFinal.Models.Goal
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Goal</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="GoalWeight" class="control-label"></label>
+                <input asp-for="GoalWeight" class="form-control" />
+                <span asp-validation-for="GoalWeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoalHealth" class="control-label"></label>
+                <input asp-for="GoalHealth" class="form-control" />
+                <span asp-validation-for="GoalHealth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoalBenchPress" class="control-label"></label>
+                <input asp-for="GoalBenchPress" class="form-control" />
+                <span asp-validation-for="GoalBenchPress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoalSquat" class="control-label"></label>
+                <input asp-for="GoalSquat" class="form-control" />
+                <span asp-validation-for="GoalSquat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoalArmCurl" class="control-label"></label>
+                <input asp-for="GoalArmCurl" class="form-control" />
+                <span asp-validation-for="GoalArmCurl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoalMileTime" class="control-label"></label>
+                <input asp-for="GoalMileTime" class="form-control" />
+                <span asp-validation-for="GoalMileTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoalStatus" class="control-label"></label>
+                <input asp-for="GoalStatus" class="form-control" />
+                <span asp-validation-for="GoalStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

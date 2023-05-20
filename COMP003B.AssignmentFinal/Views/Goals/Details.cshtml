@@ -1,0 +1,60 @@
+﻿@model COMP003B.AssignmentFinal.Models.Goal
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Goal</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GoalWeight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GoalWeight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GoalHealth)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GoalHealth)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GoalBenchPress)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GoalBenchPress)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GoalSquat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GoalSquat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GoalArmCurl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GoalArmCurl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GoalMileTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GoalMileTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GoalStatus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GoalStatus)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.GoalId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
