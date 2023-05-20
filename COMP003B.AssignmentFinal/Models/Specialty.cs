@@ -6,7 +6,8 @@ namespace COMP003B.AssignmentFinal.Models
 	{
 		public int SpecialtyId { get; set; }
 
-		[Required]
+     
+        [Required]
 		public string SpecialtyName { get; set; }
 		[Required]
 		public string SpecialtyType { get; set; }

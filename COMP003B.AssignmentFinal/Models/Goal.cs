@@ -21,5 +21,7 @@ namespace COMP003B.AssignmentFinal.Models
         public string GoalMileTime { get; set; }
         [Required]
         public string GoalStatus { get; set; }
+        public virtual ICollection<TrainerSpecialty>? TrainerSpecialties { get; set; }
+
     }
 }

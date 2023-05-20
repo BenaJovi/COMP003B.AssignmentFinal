@@ -4,7 +4,8 @@ namespace COMP003B.AssignmentFinal.Models
     public class RegistrationViewModel
     {
         [Required]
-        [StringLength(100)]
+        [StringLength(100, ErrorMessage = "Maximum length is {1}")]
+        [Display(Name = "Your name")]
         public string? UserName { get; set; }
         [Required]
         [EmailAddress]

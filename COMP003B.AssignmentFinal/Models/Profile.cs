@@ -12,6 +12,8 @@ namespace COMP003B.AssignmentFinal.Models
         public string ProfileWeight { get; set; }
         [Required]
         public string ProfileGender { get; set; }
-     
+        public virtual ICollection<TrainerSpecialty>? TrainerSpecialties { get; set; }
+
+
     }
 }
