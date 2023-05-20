@@ -48,9 +48,6 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="TrainerSpecialties" asp-action="Index">TrainerSpecialties</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="BuildProfiles" asp-action="Index">BuildProfiles</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Register">Register</a>
                         </li>
 
@@ -63,11 +60,13 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
-    @await Html.PartialAsync("_AboutTheOrganizer")
+        <details>
+            <summary>Learn about the creator</summary>
 
-
-    <footer class="fixed-bottom-0 footer text-muted ">
+            <p>@await Html.PartialAsync("_AboutTheOrganizer")</p>
+        </details>
+              
+    <footer class="fixed-bottom footer text-muted ">
         <div class="container text-sm-end">
             &copy; 2023 - COMP003B.AssignmentFinal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
@@ -79,3 +78,4 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+

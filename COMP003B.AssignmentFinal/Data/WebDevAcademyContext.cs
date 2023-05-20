@@ -9,7 +9,6 @@ namespace COMP003B.AssignmentFinal.Data
             : base(options)
         {
         }
-        public DbSet<BuildProfile> BuildProfiles { get; set; }
         public DbSet<Trainer> Trainers { get; set; }
         public DbSet<Specialty> Specialties { get; set; }
         public DbSet<TrainerSpecialty> TrainerSpecialties { get; set; }
