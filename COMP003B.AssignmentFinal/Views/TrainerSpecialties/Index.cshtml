@@ -10,27 +10,24 @@
     <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Trainer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Specialty)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
+   <thead>
+       <tr class="text-center">
+        <th>@Html.DisplayNameFor(model => model.Trainer)</th>
+        <th>@Html.DisplayNameFor(model => model.Specialty)</th>
+       </tr>
+</thead>
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
+            <tr class="text-center">
+
+                 <td >
                     @Html.DisplayFor(modelItem => item.Trainer.TrainerName)
                 </td>
-                <td>
+                <td >
                     @Html.DisplayFor(modelItem => item.Specialty.SpecialtyName)
                 </td>
+            
                 <td>
                     <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.Id">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -54,7 +51,7 @@
                         Delete
                     </a>
                 </td>
-            </tr>
+           </tr>
         }
     </tbody>
 </table>

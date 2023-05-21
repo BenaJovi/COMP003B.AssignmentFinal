@@ -24,10 +24,16 @@
 		<span asp-validation-for="UserAge" class="text-danger"></span>
 	</div>
 <p></p>
-	<button type="submit" class="btn btn-success"> Register</button>
-	<button type="submit" class="btn btn-success">
-		<a href="/Home" />
-		Back Home
-	</button>
+
+
+	<button type="submit" class="btn btn-outline-light" color: bg-white">
+	<a asp-area="" asp-controller="Home" asp-action="Index">Back To Home Page</a>
+</button>
+
+
+	<button type="submit" class="btn btn-outline-success" > Register</button>
+	
+
+
 
 </form>
