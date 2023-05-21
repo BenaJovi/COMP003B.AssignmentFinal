@@ -1,5 +1,5 @@
 ﻿@model RegistrationViewModel
-<form asp-action="Index" asp-controller="Home" method="post">
+<form asp-action="ThankYou" asp-controller="Home" method="post">
 	 <div class="form-group">
 		 <label asp-for="UserName"></label>
 		<input asp-for="UserName" class="form-control" />
@@ -25,4 +25,9 @@
 	</div>
 <p></p>
 	<button type="submit" class="btn btn-success"> Register</button>
+	<button type="submit" class="btn btn-success">
+		<a href="/Home" />
+		Back Home
+	</button>
+
 </form>

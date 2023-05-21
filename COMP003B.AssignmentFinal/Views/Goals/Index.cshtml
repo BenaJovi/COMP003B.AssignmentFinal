@@ -37,35 +37,41 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.GoalWeight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GoalHealth)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GoalBenchPress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GoalSquat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GoalArmCurl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GoalMileTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GoalStatus)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.GoalId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.GoalId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.GoalId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoalWeight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoalHealth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoalBenchPress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoalSquat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoalArmCurl)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoalMileTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoalStatus)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.GoalId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.GoalId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.GoalId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
+    <button type="submit" class="btn btn-success">
+        <a href="/Profile" />
+        Back To Profile
+    </button>
 </table>
+
