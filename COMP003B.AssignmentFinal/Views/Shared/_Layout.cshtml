@@ -65,17 +65,22 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-        <details>
-            <summary>Learn about the creator</summary>
 
-            <p>@await Html.PartialAsync("_AboutTheOrganizer")</p>
-        </details>
-              
-    <footer class="fixed-bottom footer text-muted ">
-        <div class="container text-sm-end">
+
+    <div class="card">
+       <div class="card-body">
+          <details>
+              <summary>Learn about the creator</summary>
+              <p>@await Html.PartialAsync("_AboutTheOrganizer")</p>
+          </details>
+       </div>
+    </div>
+        
+        <footer class="fixed-bottom footer text-muted ">
+          <div class="container text-sm-end">
             &copy; 2023 - COMP003B.AssignmentFinal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+          </div>
+        </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
