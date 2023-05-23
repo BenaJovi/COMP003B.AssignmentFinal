@@ -1,0 +1,27 @@
+﻿﻿@{
+	ViewData["Title"] = "Lifetime Demo";
+}
+<h1>@ViewData["Title"]</h1>
+
+<h2>Refresh/Reload this page and observe the difference</h2>
+
+<h3>Transient</h3>
+<p>Transient: A new instance of the service is created every time it is requested.
+Therefore, the UniqueId property of the TransientService will be different each time you
+visit the Transient action method.</p>
+<p style="font-weight:bold">Transient Service ID 1: @ViewData["TransientId1"]</p>
+<p style="font-weight:bold">Transient Service ID 2: @ViewData["TransientId2"]</p>
+
+<h3>Scoped</h3>
+<p>Scoped: The service instance is shared within the scope of an HTTP request. When you
+visit the Scoped action method, the UniqueId property of the ScopedService will be the
+same for each visit within the same request but different between requests.</p>
+<p style="font-weight:bold">Scoped Service ID 1: @ViewData["ScopedId1"]</p>
+<p style="font-weight:bold">Scoped Service ID 2: @ViewData["ScopedId2"]</p>
+
+<h3>Singleton</h3>
+<p>Singleton: Only one instance of the service is created, and it is shared throughout
+the entire application. The UniqueId property of the SingletonService will remain the
+same for all visits to the Singleton action method.</p>
+<p style="font-weight:bold">Singleton Service ID 1: @ViewData["SingletonId1"]</p>
+<p style="font-weight:bold">Singleton Service ID 2: @ViewData["SingletonId2"]</p>

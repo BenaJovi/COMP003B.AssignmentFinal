@@ -1,4 +1,5 @@
 using COMP003B.AssignmentFinal.Data;
+using COMP003B.AssignmentFinal.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace COMP003B.AssignmentFinal
@@ -9,12 +10,20 @@ namespace COMP003B.AssignmentFinal
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            builder.Services.AddControllersWithViews();
+			// Add services to the container.
+			// Add services to the container.
+			builder.Services.AddControllersWithViews();
+			builder.Services.AddTransient<MyTransientService>();
+			builder.Services.AddScoped<MyScopedService>();
+			builder.Services.AddSingleton<MySingletonService>();
 
-            // Set up the database context.
-            builder.Services.AddDbContext<WebDevAcademyContext>(options => options.UseSqlServer("Name=ConnectionStrings:DefaultConnection"));
-            var app = builder.Build();
+			// Set up the database context.
+			builder.Services.AddDbContext<WebDevAcademyContext>(options => options.UseSqlServer("Name=ConnectionStrings:DefaultConnection"));
+
+			var app = builder.Build();
+
+			
+          
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
